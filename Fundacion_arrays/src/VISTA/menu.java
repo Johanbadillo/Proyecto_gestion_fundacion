@@ -1,21 +1,20 @@
 package VISTA;
 
-import CONTROLADOR.FUNCIONES;
+import CONTROLADOR.funciones_registrar;
 import CONTROLADOR.validaciones;
 
 public class menu {
 
     public static void main(String[] args)  {
         validaciones v = new validaciones();
-        funciones_Registrar fr = new funciones();
-        funciones_presentaciones fp = new funciones();
+        funciones_registrar fr = new funciones_registrar();
         int op = 0;
         int opp= 0;
         do {
             op = v.validacion(1, 3, "============================\n=== FUNDACION AYUDAS COMUNITARIAS ===\n1- Registrar persona\n2- Presentacion Personas\n3- Salir\n============================");
             switch(op){
                 case 1:
-                    opp=v.validacion(1, 4, "============================\n=== Menu Para Registro de usuarios ===\n1- Registrar Empleado\n2- Registrar Colaborador\n3- Registrar Beneficiario\n4- salir\n============================");
+                    opp=v.validacion(1, 4, "============================\n=== Menu Para Registro de usuarios ===\n1- Registrar Empleado\n2- Registrar Colaborador\n3- Registrar Beneficiario\n4- Regresar al menu anterior\n============================");
                     switch(opp){
                         case 1:
                             fr.agg_empleados();
@@ -29,7 +28,9 @@ public class menu {
                     }
                     break;
                 case 2:
-                    fp.presentacion_Personas();
+                    fr.mostrarEmpleados();
+                    fr.mostrarColaboradores();
+                    fr.mostrarBeneficiarios();
                     break;
             }
         } while (op != 3);

@@ -20,11 +20,11 @@ public class COLABORADORES extends PERSONA {
         this.horas_por_mes = horas_por_mes;
     }
 
-    public String getmeta_voluntaria() {
+    public int getmeta_voluntaria() {
         return meta_voluntaria;
     }
 
-    public void setmeta_voluntaria(String meta_voluntaria) {
+    public void setmeta_voluntaria(int meta_voluntaria) {
         this.meta_voluntaria = meta_voluntaria;
     }
 

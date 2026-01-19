@@ -1,10 +1,10 @@
 package MODELO;
 
-public class BENEFICIARIO extends PERSONA{
+public class BENEFICIARIOS extends PERSONA{
     private int ayuda_mes;
 
-    public BENEFICIARIO(int ayuda_mes,String documento, String nombre, String apellido, int edad, String direccion, String tipo) {
-        super(documento, nombre, apellido, edad, direccion, tipo);
+    public BENEFICIARIOS(int ayuda_mes, String documento, String nombre, String apellido, int edad, String direccion) {
+        super(documento, nombre, apellido, edad, direccion);
         this.ayuda_mes = ayuda_mes;
     }
 
